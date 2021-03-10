@@ -221,6 +221,7 @@ stages:
   dependsOn: Build_Function_${{ parameters.environment }}
   variables:
     - group: webinar-${{ parameters.environment }}  
+    - group: terraform-keyvault
   jobs:
     - template: azure-function-deploy-jobs-template.yml
       parameters:
